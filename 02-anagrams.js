@@ -31,9 +31,65 @@ console.log(secondAnagram("gizmo", "sally"));
 console.log(secondAnagram("elvis", "lives"));
 
 function thirdAnagram(str1, str2) {
-  // Code goes here ....
+  let obj1 = {};
+  let obj2 = {};
+  for (let i = 0; i < str1.length; i++) {
+    if(!obj1[str1[i]]) {
+      obj1[str1[i]] = 1;
+    } else {
+      obj1[str1[i]]++;
+    }
+    if (!obj2[str2[i]]) {
+      obj2[str2[i]] = 1;
+    } else {
+      obj2[str2[i]]++;
+    }
+  }
+
+  for(let key in obj1) {
+    if(obj2[key] !== obj1[key]) {
+      return false;
+    }
+  }
+  return true;
+
 }
 
+console.log(thirdAnagram("gizmo", "sally"));
+console.log(thirdAnagram("elvis", "lives"));
+
+
+
 function fourthAnagram(str1, str2) {
-  // Code goes here ....
+  let obj = {};
+  for(let i = 0; i < str1.length; i++) {
+    if (!obj[str1[i]]) {
+      obj[str1[i]] = 1;
+    } else {
+      obj[str1[i]]++;
+    }
+    if (!obj[str2[i]]) {
+      obj[str2[i]] = 1;
+    } else {
+      obj[str2[i]]++;
+  }
 }
+let counter = 0;
+for(let key in obj) {
+  counter++;
+  if(obj[key] === 1) {
+    return false;
+  }
+  }
+if(counter !== str1.length) {
+  return false;
+}
+return true;
+}
+
+
+
+
+
+console.log(fourthAnagram("gizmo", "sally"));
+console.log(fourthAnagram("elvis", "lives"));
