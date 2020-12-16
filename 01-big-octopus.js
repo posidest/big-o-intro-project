@@ -45,17 +45,16 @@ console.log(nlognBiggestFish(fishies));
 const linearBiggestFish = (fishes) => {
   let longest = 0;
   let longestFish = "";
-  for(let i = 0; i < fishes.length; i++) {
-    if(fishes[i].length > longest) {
+  for (let i = 0; i < fishes.length; i++) {
+    if (fishes[i].length > longest) {
       longest = fishes[i].length;
       longestFish = fishes[i];
     }
   }
   return longestFish;
-}
+};
 
 console.log(linearBiggestFish(fishies));
-
 
 tilesArray = [
   "up",
@@ -70,16 +69,15 @@ tilesArray = [
 
 function slowDance(direction, tilesArray) {
   let tentacleNumber;
-  for(let i = 0; i < tilesArray.length; i++) {
-    if(tilesArray[i] === direction) {
+  for (let i = 0; i < tilesArray.length; i++) {
+    if (tilesArray[i] === direction) {
       tentacleNumber = i;
-    } 
+    }
   }
   return tentacleNumber;
 }
 
-console.log(slowDance("right-down", tilesArray))
-
+console.log(slowDance("right-down", tilesArray));
 
 tilesObj = {
   up: 0,
@@ -92,7 +90,8 @@ tilesObj = {
   "left-up": 7,
 };
 
-
 function fastDance(direction, tilesObj) {
-  
+  return tilesObj[direction];
 }
+console.log(fastDance("right-down", tilesObj));
+console.log(fastDance("right", tilesObj));
