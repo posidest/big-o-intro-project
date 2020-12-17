@@ -1,5 +1,5 @@
 function badTwoSum(arr, targetSum) {
-  // Code goes here ...
+  .
 }
 
 

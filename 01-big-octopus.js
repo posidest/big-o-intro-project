@@ -2,7 +2,9 @@ function quadraticBiggestFish(fishes) {
   let longest = 0;
   let results = [];
   for (let i = 0; i < fishes.length; i++) {
+    // O(n)
     for (let j = i + 1; j < fishes.length; j++) {
+      // O(n)
       if (fishes[j].length > fishes[i].length) {
         longest = fishes[j].length;
         results.push(fishes[j]);
